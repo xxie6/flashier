@@ -83,7 +83,8 @@ solve.ebnm <- function(factor, n, flash, output = default.ebnm.output) {
   } else if (((is.new(factor) && warmstart.greedy(flash)) ||
               (!is.new(factor) && warmstart.backfits(flash)))
              && !is.null(prev.g)
-             && warmstart.sanity.check(prev.g, ebnm.args$x, ebnm.args$s)) {
+             # && warmstart.sanity.check(prev.g, ebnm.args$x, ebnm.args$s)
+             ) {
     g    <- prev.g
     fixg <- FALSE
     ignored.warnings <- NULL
